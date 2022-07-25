@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VaccineController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\FacultyController;
+use App\Http\Controllers\ProgramController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +29,6 @@ use App\Http\Controllers\StudentController;
 Route::resource('/vaccine', VaccineController::class);
 Route::get('/vaccine/search/{name}', [VaccineController::class,'search']);
 Route::resource('/student', StudentController::class);
+Route::get('/faculty/graph-faculty', [FacultyController::class,'graphFaculty']);
+Route::resource('/faculty', FacultyController::class);
+Route::resource('/program', ProgramController::class);
